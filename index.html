@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Super Fun Interactive Form! 🌈</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">🌟 Super Fun Interactive Form! 🌟</h1>
+      <p class="subtitle">
+        Fill out this awesome form and join our magical adventure!
+      </p>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <form id="funForm">
+        <!-- Personal Info Section -->
+        <div class="form-section">
+          <h2 class="section-title">🦄 Tell Us About Yourself! 🦄</h2>
+
+          <div class="two-column">
+            <div class="form-group">
+              <label for="firstName">🌈 First Name:</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="What's your awesome first name?"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">⭐ Last Name:</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Your super cool last name!"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nickname">🎈 Cool Nickname:</label>
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              placeholder="What do your friends call you?"
+            />
+          </div>
+
+          <div class="two-column">
+            <div class="form-group">
+              <label for="age">🎂 How Old Are You?</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="5"
+                max="18"
+                placeholder="Your age"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="birthday">🎉 Birthday:</label>
+              <input type="date" id="birthday" name="birthday" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="form-section">
+          <h2 class="section-title">📞 How Can We Reach You? 📞</h2>
+
+          <div class="form-group">
+            <label for="email">📧 Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your.email@awesome.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">📱 Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(123) 456-7890"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="address">🏠 Home Address:</label>
+            <textarea
+              id="address"
+              name="address"
+              placeholder="Where do you live? (Street, City, State)"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Preferences Section -->
+        <div class="form-section">
+          <h2 class="section-title">🌟 Your Amazing Preferences! 🌟</h2>
+
+          <div class="form-group">
+            <label>🎨 What's Your Favorite Color?</label>
+            <div class="color-picker-group">
+              <input
+                type="color"
+                name="favoriteColor1"
+                value="#ff6b6b"
+                title="Red"
+              />
+              <input
+                type="color"
+                name="favoriteColor2"
+                value="#4ecdc4"
+                title="Teal"
+              />
+              <input
+                type="color"
+                name="favoriteColor3"
+                value="#45b7d1"
+                title="Blue"
+              />
+              <input
+                type="color"
+                name="favoriteColor4"
+                value="#96ceb4"
+                title="Green"
+              />
+              <input
+                type="color"
+                name="favoriteColor5"
+                value="#ffeaa7"
+                title="Yellow"
+              />
+              <input
+                type="color"
+                name="favoriteColor6"
+                value="#fd79a8"
+                title="Pink"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>🦸‍♀️ Choose Your Superpower!</label>
+            <div class="radio-group">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="flying"
+                  name="superpower"
+                  value="flying"
+                />
+                <label for="flying">🕊️ Flying</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="invisible"
+                  name="superpower"
+                  value="invisible"
+                />
+                <label for="invisible">👻 Invisibility</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="strength"
+                  name="superpower"
+                  value="strength"
+                />
+                <label for="strength">💪 Super Strength</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="speed"
+                  name="superpower"
+                  value="speed"
+                />
+                <label for="speed">⚡ Super Speed</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>🍕 What Foods Do You Love? (Pick all that apply!)</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="pizza" name="food" value="pizza" />
+                <label for="pizza">🍕 Pizza</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="icecream"
+                  name="food"
+                  value="icecream"
+                />
+                <label for="icecream">🍦 Ice Cream</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="cookies"
+                  name="food"
+                  value="cookies"
+                />
+                <label for="cookies">🍪 Cookies</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="burgers"
+                  name="food"
+                  value="burgers"
+                />
+                <label for="burgers">🍔 Burgers</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="fruits" name="food" value="fruits" />
+                <label for="fruits">🍎 Fruits</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="candy" name="food" value="candy" />
+                <label for="candy">🍭 Candy</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Activities Section -->
+        <div class="form-section">
+          <h2 class="section-title">🎮 Fun Activities & Interests! 🎮</h2>
+
+          <div class="form-group">
+            <label for="hobby">🎯 Favorite Hobby:</label>
+            <select id="hobby" name="hobby">
+              <option value="">Choose your favorite hobby!</option>
+              <option value="gaming">🎮 Video Games</option>
+              <option value="reading">📚 Reading</option>
+              <option value="sports">⚽ Sports</option>
+              <option value="music">🎵 Music</option>
+              <option value="art">🎨 Drawing/Art</option>
+              <option value="dancing">💃 Dancing</option>
+              <option value="cooking">👨‍🍳 Cooking</option>
+              <option value="gardening">🌱 Gardening</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label
+              >⭐ How Excited Are You About This Form? (Drag the star!)</label
+            >
+            <div class="slider-container">
+              <input
+                type="range"
+                id="excitement"
+                name="excitement"
+                min="1"
+                max="10"
+                value="5"
+              />
+              <div class="slider-value">
+                <span class="fun-emoji">⭐</span>
+                <span id="excitementValue">5</span>/10
+                <span class="fun-emoji">⭐</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <div class="form-group">
+              <label for="wakeup">🌅 When Do You Wake Up?</label>
+              <input type="time" id="wakeup" name="wakeup" />
+            </div>
+
+            <div class="form-group">
+              <label for="bedtime">🌙 When Do You Go to Bed?</label>
+              <input type="time" id="bedtime" name="bedtime" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dream">💭 Tell Us About Your Biggest Dream!</label>
+            <textarea
+              id="dream"
+              name="dream"
+              placeholder="What do you want to be when you grow up? What's your biggest dream or goal?"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-container">
+          <button type="submit" class="submit-btn">
+            🚀 Submit My Awesome Form! 🚀
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Progress bar functionality
+      function updateProgress() {
+        const form = document.getElementById("funForm");
+        const inputs = form.querySelectorAll(
+          "input[required], select[required], textarea[required]"
+        );
+        const progressFill = document.getElementById("progressFill");
+
+        let filled = 0;
+        inputs.forEach((input) => {
+          if (input.type === "radio") {
+            if (form.querySelector(`input[name="${input.name}"]:checked`)) {
+              filled++;
+            }
+          } else if (input.value.trim() !== "") {
+            filled++;
+          }
+        });
+
+        const percentage = (filled / inputs.length) * 100;
+        progressFill.style.width = percentage + "%";
+      }
+
+      // Excitement slider
+      const excitementSlider = document.getElementById("excitement");
+      const excitementValue = document.getElementById("excitementValue");
+
+      excitementSlider.addEventListener("input", function () {
+        excitementValue.textContent = this.value;
+        const emojis = [
+          "😴",
+          "😕",
+          "😐",
+          "🙂",
+          "😊",
+          "😄",
+          "😆",
+          "🤩",
+          "🚀",
+          "🌟",
+        ];
+        const emoji = emojis[Math.floor((this.value - 1) * 0.9)];
+        document.querySelector(".fun-emoji").textContent = emoji;
+      });
+
+      // Add event listeners for progress tracking
+      document
+        .querySelectorAll("input, select, textarea")
+        .forEach((element) => {
+          element.addEventListener("input", updateProgress);
+          element.addEventListener("change", updateProgress);
+        });
+
+      // Form submission
+      document
+        .getElementById("funForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Create celebration effect
+          const container = document.querySelector(".container");
+          container.style.animation = "bounce 1s ease-in-out 3";
+
+          // Show success message
+          setTimeout(() => {
+            alert(
+              "🎉 Wow! Your form is AMAZING! Thank you for sharing all that cool information with us! 🌟"
+            );
+          }, 1000);
+        });
+
+      // Add fun hover effects to form sections
+      document.querySelectorAll(".form-section").forEach((section) => {
+        section.addEventListener("mouseenter", function () {
+          this.style.transform = "scale(1.02)";
+          this.style.transition = "transform 0.3s ease";
+        });
+
+        section.addEventListener("mouseleave", function () {
+          this.style.transform = "scale(1)";
+        });
+      });
+
+      // Initialize progress
+      updateProgress();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #ffeaa7
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="20" font-size="20" fill="%23ff6b6b">⭐</text><text x="30" y="50" font-size="15" fill="%234ecdc4">🌈</text><text x="60" y="30" font-size="18" fill="%2345b7d1">🚀</text><text x="20" y="80" font-size="16" fill="%2396ceb4">🎈</text><text x="80" y="70" font-size="14" fill="%23ffeaa7">🦄</text></svg>')
+    repeat;
+  opacity: 0.1;
+  animation: float 20s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 0px #fff, 6px 6px 0px rgba(255, 107, 107, 0.3);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2em;
+  color: #4ecdc4;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin: 30px 0;
+  padding: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.4)
+  );
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.form-section::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+
+.form-group {
+  margin: 20px 0;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid #4ecdc4;
+  border-radius: 15px;
+  font-size: 1.1em;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.checkbox-item,
+.radio-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid #4ecdc4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+
+.checkbox-item:hover,
+.radio-item:hover {
+  background: #4ecdc4;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.5);
+}
+
+.slider-container {
+  margin: 20px 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1);
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-value {
+  text-align: center;
+  font-size: 1.3em;
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.color-picker-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+input[type="color"] {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="color"]:hover {
+  transform: scale(1.2);
+}
+
+.submit-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+}
+
+.fun-emoji {
+  font-size: 2em;
+  margin: 0 10px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  .checkbox-group,
+  .radio-group {
+    flex-direction: column;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
